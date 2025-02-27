@@ -1,0 +1,128 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+<link rel="stylesheet" href="{%static 'styles/register.css'%}">
+<link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+<link rel="stylesheet" href="{%static 'styles/check_out.css'%}">
+        
+        <div class="payment--viewPort">
+            <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12 col-md-12 col-lg-6">
+                    <div class="card card__background p-4">
+                        <h2 class="event--name">{{event.name}}</h2>
+                        <p class="card-text">
+                            <ul class="text-white">
+                                {{event.details}}
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-5">
+                    <div class="card card--updated p-4">
+                        <h2 class="event--name">Bill</h2>
+                        <div class="d-flex justify-content-around mt-4">
+                            <p class="text-card text-white">Registration Fee</p>
+                            <p id="registration-fee" class="text-card text-white">${{event.fees}}</p>
+                        </div>
+                        <div class="d-flex justify-content-around mt-4">
+                            <p class="text-card text-white">Platform Fee (2%)</p>
+                            <p id="platform-fee" class="text-card text-white">0</p>
+                        </div>
+                        <hr class="text-white border-2">
+                        <div class="d-flex justify-content-around mt-4">
+                            <p class="text-card text-white">Amount to Pay</p>
+                            <p id="total-fee" class="text-card text-white">0</p>
+                        </div>
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="custom--button buy-btn" >PAY</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+   
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+        const registrationFeeElement = document.getElementById('registration-fee');
+        const platformFeeElement = document.getElementById('platform-fee');
+        const totalFeeElement = document.getElementById('total-fee');
+
+        const registrationFee = parseFloat(registrationFeeElement.textContent.replace('$', ''));
+        const platformFee = registrationFee * 0.02;
+        const totalFee = registrationFee + platformFee;
+
+        platformFeeElement.textContent = `$${platformFee.toFixed(2)}`;
+        totalFeeElement.textContent = `$${totalFee.toFixed(2)}`;
+
+
+
+        const buyBtn = document.querySelector('.buy-btn');
+        buyBtn.addEventListener('click', function() {
+            fetch('/payment_for_registration/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken
+                },
+                body: JSON.stringify({
+                    amount: totalFee
+                })
+            }).then(response =>
+             response.json()).then(data => {
+                console.log("this!!!!")
+                const options = {
+                    "key" : data.key_id,
+                    "amount" : data.amount,
+                    "currency" : data.currency,
+                    "name" : "TechFest4.0",
+                    "description" : "Registration Fee",
+                    "handler" : function(response){
+                        fetch('/payment_successful/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': csrfToken
+                            },
+                            body: JSON.stringify({
+                                razorpay_payment_id: response.razorpay_payment_id
+                            })
+                        }).then(response => response.json()).then(data => {
+                            alert(data.status);
+                        }).catch(error => {
+                            console.error('Error:', error);
+                        });
+                    },
+                    "prefill" : {
+                        "name": "John Doe",
+                        "email": "john.doe@example.com",
+                        "contact": "9999999999"
+                    },
+                    "notes" : {
+                       "address" : "Customer Address" 
+                    },
+                    "theme" : {
+                        "color" : "#6bc793"
+                    } 
+                };
+                const rzp = new Razorpay(options)
+                rzp.open();
+                e.preventDefault();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        })
+            
+    });
+</script>
+
+{% endblock %}

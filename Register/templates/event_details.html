@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+{% block content %}
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/event_details.css'%}">
+        <h2 class="eventCard--heading text-center">EVENT DETAILS</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card-body card">
+                        <form  method="post" enctype="multipart/form-data">
+                            {%csrf_token%}
+                        {{form}}
+                        <div style="display: flex;justify-content: center;"><button class="custom--button">Next</button></div>
+                    </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            * {
+                font-family: var(--font-family-R);
+            }
+            .card {width: auto; 
+                min-height: fit-content;
+                
+               
+        border-radius: 30px;
+        border: 2px solid #0C964D;
+        background: rgba(86, 142, 95, 0.20);
+    }
+        </style>
+
+{% endblock %}
+

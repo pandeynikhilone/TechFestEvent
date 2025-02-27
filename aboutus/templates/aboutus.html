@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/event_details.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/aboutus.css'%}">
+        <h2 class="eventCard--heading text-center">About us</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card-body card">
+                        <ul class = "row">
+                            <li class="col-12 col-md-12 col-xl-3"><p>click to Download Brouchers        :</p></li>
+                            <li class="col-12 
+                            col-md-6 col-xl-4 "><a href="https://drive.google.com/file/d/1AcNfiQlD9RJ1hug7UKeRb28Hzl4AEPCn/view?usp=sharing">
+                                <p class="techfest-b">techfest Broucher’s</p>
+                            </a></li>
+                            <li class="col-12
+                            col-md-6 col-xl-4"><a href="https://drive.google.com/file/d/1_f_CUCzOTSvNxTBHYpB6g-KSiRoixAyM/view?usp=drive_link">
+                                <p class="expo-b">Expo Renaissance</p>
+                            </a></li>
+                        </ul>
+<p>About the Event-At TechFest 4.0, we bring together the brightest minds, the most creative souls, and passionate tech enthusiasts under one roof to celebrate innovation, competition, and creativity. This year’s fest is a dynamic blend of technology, talent, and entertainment, with events designed to engage diverse skills and interests. From coding wizards to digital artists, every participant finds a platform to shine.
+    The purpose of TechFest 4.0 is to foster creativity and promote technology among students and young professionals. We aim to inspire the next generation of tech leaders and esports enthusiasts by creating a platform that encourages innovation, teamwork, and competition.</p>
+
+    <p>About the college-National Post Graduate College, established in 2005, stands as a beacon of academic excellence and innovation. With a serene and inclusive campus, the college is dedicated to nurturing talent and fostering growth in every student. The Computer Science department, a cornerstone of the institution, embraces the latest technological advancements to deliver a robust, industry-oriented education. The college equips students with the skills and confidence to excel in their chosen fields by emphasizing research, internships, and hands-on learning. Complemented by a vibrant array of cultural, sports, and extracurricular opportunities, the college shapes well-rounded individuals prepared to make meaningful contributions to society.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            * {
+                font-family: var(--font-family-R);
+            }
+            .card {width: auto; 
+                min-height: fit-content;
+                
+               
+        border-radius: 30px;
+        border: 2px solid #0C964D;
+        background: rgba(86, 142, 95, 0.20);
+    }
+        </style>
+
+{% endblock %}
+

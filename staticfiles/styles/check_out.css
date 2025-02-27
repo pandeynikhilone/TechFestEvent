@@ -1,0 +1,17 @@
+* {
+    font-family: var(--font-family-R);
+}
+
+.card {
+    width: auto;
+}
+
+.card__background {background-color: transparent;}
+
+.payment--viewPort {
+    margin: 20px 10px 0px 10px;
+}
+
+.thick-hr {
+    height: 3px;
+}

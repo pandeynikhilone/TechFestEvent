@@ -1,0 +1,36 @@
+.card{
+    color: white;
+}
+
+.insta-l{
+    background: linear-gradient(90deg, #A140D9 0%, #D6C836 48.9%, #FE49F8 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: bold;
+}
+
+.email-l{
+    color: #2869C3;
+    font-weight: bold;
+}
+
+.contact-l{
+    color: #20D374;
+    font-weight: bold;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+
+

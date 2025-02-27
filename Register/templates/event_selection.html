@@ -1,0 +1,54 @@
+
+        
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/event_selection.css' %}">
+        <h2 class="eventCard--heading text-center">Choose Your Event</h2>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <!-- Card 1 -->
+                 {% for event in events %}
+                <div class="col-12 col-md-8 col-lg-4 mb-4 mr-4 " style="width: auto;">
+                    <div class="card event-option card--updated d-flex justify-content-center align-items-center">
+                        <img class="card-img-top mt-4 " src="{{event.icon.url}}" alt="Card image cap">
+                        <h2 class="event--name mt-3">{{event.name}}</h2>
+                        <div class="card-body">
+                            <p class="card-text text-white">
+                                <ul class="mb-0 ps-4 text-white mb-3">
+                                    {{event.about}}
+                                </ul>
+                            </p>
+                        </div>
+                        <button class="event-btn custom--button" style="display: none;">Next</button>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+            
+        </div>
+
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const eventOptions = document.querySelectorAll('.event-option');
+            
+                eventOptions.forEach((option) => {
+                    option.addEventListener('click', () => {
+                        // Extract the event name from the card
+                        const chosenEvent = option.querySelector('.event--name').textContent.trim();
+            
+                        // Navigate to the event details page
+                        window.location.replace(`/event_details/${encodeURIComponent(chosenEvent)}`);
+                    });
+                });
+            });
+            
+            </script>
+
+{% endblock %}
+
+            

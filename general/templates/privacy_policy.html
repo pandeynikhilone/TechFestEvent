@@ -1,0 +1,63 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/event_details.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/aboutus.css'%}">
+        <h2 class="eventCard--heading text-center">Privacy Policy</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card-body card">
+                        <p>This Privacy Policy explains how TechFest 4.0, organized by National Post Graduate College, Lucknow, collects, uses, and protects your information.</p>
+
+                        <h3>1. Information We Collect</h3>
+                        <p><strong>Personal Information:</strong> During registration, we collect your name, email address, phone number, college name, and college ID. Additionally, we may verify your identity using your Aadhaar card.</p>
+                
+                        <h3>2. Use of Collected Information</h3>
+                        <p>We use the collected information solely for processing your registration for the event.</p>
+                        <p>We do not use your data for promotional purposes.</p>
+                
+                        <h3>3. Data Sharing</h3>
+                        <p>We do not share participants' data with third parties, except as required for payment processing through Razorpay or as mandated by law.</p>
+                
+                        <h3>4. Data Protection</h3>
+                        <p>Your personal information is stored securely and is under strict observation. We take full responsibility for its confidentiality.</p>
+                        <p>Payments are processed securely through Razorpay.</p>
+                
+                        <h3>5. Cookies and Sessions</h3>
+                        <p>We use session-based technologies to save participants' IDs temporarily during the registration process.</p>
+                
+                        <h3>6. User Rights</h3>
+                        <p>Participants can access, update, or request deletion of their personal information by contacting us through the details provided on our <a href="/contactus/">Contact Us</a> page.</p>
+                        <p>Support is available via email and phone.</p>
+                
+                        <h3>7. Data Retention</h3>
+                        <p>We retain participants' data for a maximum of three months after the event.</p>
+                
+                        <h3>8. Changes to This Privacy Policy</h3>
+                        <p>We reserve the right to update this Privacy Policy at any time. Participants will be notified of any changes through email and updates on our website.</p>
+                
+                        <h3>9. Contact Information</h3>
+                        <p>If you have any questions about this Privacy Policy, please contact us via email or phone. Contact details are provided on the <a href="/contactus/">Contact Us</a> page.</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            * {
+                font-family: var(--font-family-R);
+            }
+            .card {width: auto; 
+                min-height: fit-content;
+                
+               
+        border-radius: 30px;
+        border: 2px solid #0C964D;
+        background: rgba(86, 142, 95, 0.20);
+    }
+        </style>
+
+{% endblock %}
+

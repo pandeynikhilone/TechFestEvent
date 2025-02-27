@@ -1,0 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+@font-face {
+    font-family: Hack Regular;
+    src: url(../assets/fonts/Hack-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    background-color: #111;
+    background-image: url(../assets/image/background.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+

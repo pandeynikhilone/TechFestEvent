@@ -1,0 +1,29 @@
+.eventCard--heading {
+    margin: 85px 0px 50px 0px;
+    color: var(--selected-text-color);
+    font-family: var(--font-family-R);
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 124.5%; /* 53.535px */
+    letter-spacing: 6.45px;
+}
+
+.card--updated {
+    width: 20rem;
+    border-radius: 30px;
+    border: 2px solid #0C964D;
+    background: rgba(86, 142, 95, 0.20);
+}
+
+.card-img-top {
+    width: 75px;
+}
+
+.event--name {
+    font-family: var(--font-family-R);
+    color: var(--selected-text-color);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 124.5%; /* 43.575px */
+    letter-spacing: 5.25px;
+}

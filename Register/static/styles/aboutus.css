@@ -1,0 +1,28 @@
+
+
+li{
+    list-style-type: none;
+    
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+  
+}
+
+p{
+    color: white;
+}
+
+.techfest-b{
+    color : #20D374
+}
+
+.expo-b{
+    color: #9169CA;
+}
+
+a{
+    font-size: 16px;
+}

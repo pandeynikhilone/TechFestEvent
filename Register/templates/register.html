@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+
+        <link rel="stylesheet" href='{% static "styles/register.css" %}'>
+        <div class="user-register">
+            
+            <img src="{%static 'graphics/techFest.svg'%}" alt="" class="teachFest--image">
+            <div class="form">
+                <h2 class="register-text">Register</h2>
+                <form class="register-form" method="post" action = "{%url 'register'%}">
+                    {%csrf_token%}
+                    {{form}}    
+                    <div ><button type="submit" class="custom--button">Save</button></div>
+                </form>
+                    
+            </div>
+            <img class="support_graphic--img" src="{%static 'graphics/image.svg'%}" />
+        </div>
+
+        <style>
+            .user-register{
+                margin-top: 3rem;
+            }
+        </style>
+{% endblock %}

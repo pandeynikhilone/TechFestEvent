@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/event_details.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/aboutus.css'%}">
+        <h2 class="eventCard--heading text-center">Terms And Conditions</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card-body card">
+                        <p>Welcome to TechFest 4.0</p>
+        <p>These Terms and Conditions govern your participation in TechFest 4.0, organized by National Post Graduate College, Lucknow. By registering for the event, you agree to comply with these terms.</p>
+
+        <h3>1. Purpose of the Event</h3>
+        <p>TechFest 4.0 aims to inspire innovation, foster skill development, and showcase talent in science and technology. Participation is open to students currently enrolled in any college.</p>
+
+        <h3>2. Registration</h3>
+        <p>
+            
+                The deadline for registration is <strong>February 1, 2025</strong>.</li>
+                Participants may edit their registration details by contacting the registration team, but cancellations are not permitted once registration is confirmed.</li>
+            
+        </p>
+
+        <h3>3. Participation Rules</h3>
+        <p>
+            Participants must maintain decorum and discipline throughout the event.</li>
+            Event-specific rules will be provided and must be adhered to by all participants.</li>
+            Participants may register for multiple events, provided there are no timing or scheduling conflicts.</li>
+        </p>
+
+        <h3>4. Fees and Payments</h3>
+        <p>
+            The registration fee is <strong>non-refundable</strong> once an admit card has been issued.</li>
+            Payments can be made via UPI, credit/debit cards, or any other methods supported by Razorpay.</li>
+        </p>
+
+        <h3>5. Event Modifications and Cancellations</h3>
+        <p>
+            
+                The organizing team reserves the right to modify event dates, schedules, or other details as needed.</li>
+                In the unlikely event of a cancellation, all participants will receive a full refund of their registration fees.</li>
+            
+        </p>
+
+        <h3>6. Liability Disclaimer</h3>
+        <p>The organizers shall not be held liable for any unforeseen issues, including technical problems, delays, or cancellations, that may impact the event.</p>
+
+        <h3>7. Intellectual Property</h3>
+        <p>Participants retain full rights to any projects, ideas, or submissions made during the event. The organizers do not claim any ownership or rights over participants' intellectual property.</p>
+
+        <h3>8. Contact Information</h3>
+        <p>For any questions regarding these Terms and Conditions, please refer to the <a href="/contactus/">Contact Us</a> page on our website.</p>
+
+                </div>
+            </div>
+        </div>
+        <style>
+            * {
+                font-family: var(--font-family-R);
+            }
+            .card {width: auto; 
+                min-height: fit-content;
+                
+               
+        border-radius: 30px;
+        border: 2px solid #0C964D;
+        background: rgba(86, 142, 95, 0.20);
+    }
+        </style>
+
+{% endblock %}
+

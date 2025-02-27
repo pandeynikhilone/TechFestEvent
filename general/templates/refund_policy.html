@@ -1,0 +1,71 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/event_details.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/aboutus.css'%}">
+        <h2 class="eventCard--heading text-center">Refund Policy</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card-body card">
+
+                        <h3>Refund and Cancellation Policy for Techfest 4.0</h3>
+
+<p>We want to ensure a smooth and transparent process for all participants of Techfest 4.0. Below is our Refund and Cancellation Policy:</p>
+
+<h3>1. Refund Eligibility</h3>
+<p>Refunds will be provided under the following conditions:</p>
+<p><strong>Event Cancellation:</strong> If the event is cancelled by the organizers, participants will be eligible for a full refund.</p>
+<p><strong>Refunds Not Allowed:</strong> Refund requests will not be processed once the participant has received the admit card.</p>
+
+<h3>2. Refund Process</h3>
+<p>Participants wishing to request a refund must follow these steps:</p>
+<p><strong>How to Request:</strong> Refund requests should be submitted via email or phone.</p>
+<p><strong>Required Information:</strong> Participants need to provide the following details for a refund request:</p>
+<p>Transaction ID</p>
+<p>Participant Name</p>
+<p>Contact Details</p>
+<p>Event Name</p>
+<p><strong>Refund Processing Time:</strong> Refund requests will be processed within 7-8 working days and credited to the participant’s bank account.</p>
+
+<h3>3. Cancellation Rules</h3>
+<p><strong>Cancellation by Participant:</strong> Participants are not allowed to cancel their registration once submitted, except in the case of event cancellation by the organizers.</p>
+<p><strong>Exceptions:</strong> There are no exceptions for cancellations, including medical emergencies.</p>
+
+<h3>4. Mode of Refund</h3>
+<p>Refunds will be processed using the original payment method, which may include:</p>
+<p>Razorpay (if used for payment)</p>
+<p>UPI (if the payment was made via UPI)</p>
+
+<h3>5. Event Cancellation by Organizers</h3>
+<p><strong>In Case of Cancellation or Rescheduling:</strong> If Techfest 4.0 is cancelled or rescheduled by the organizers, all participants will be eligible for a <strong>full refund</strong>.</p>
+<p><strong>Full Refund Assurance:</strong> A full refund will be credited if the event is cancelled by the organizers.</p>
+
+<h3>6. Contact Information</h3>
+<p>For any inquiries regarding refunds or cancellations, please contact us via the <a href="/contactus/">Contact Us</a> page</p>
+
+<p>We hope this policy helps clarify any questions you may have. Thank you for participating in Techfest 4.0!</p>
+
+                        
+                </div>
+            </div>
+        </div>
+        <style>
+            * {
+                font-family: var(--font-family-R);
+            }
+            .card {width: auto; 
+                min-height: fit-content;
+                
+               
+        border-radius: 30px;
+        border: 2px solid #0C964D;
+        background: rgba(86, 142, 95, 0.20);
+    }
+        </style>
+
+{% endblock %}
+

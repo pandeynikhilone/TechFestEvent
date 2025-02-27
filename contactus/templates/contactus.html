@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{%load static%}
+        <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+        <link rel="stylesheet" href="{%static 'styles/event_selection.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/event_details.css'%}">
+        <link rel="stylesheet" href="{%static 'styles/contactus.css'%}">
+        <h2 class="eventCard--heading text-center">Contact us</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card-body card">
+                       <ul class="col-8">
+                        <li class="row">
+                            <p class="col-6 insta-l">Instagram :   
+                            </p>
+                            <a href="" class="col-6"><p>@Techfest4.0</p></a>
+                        </li>
+                        <li class="row col">
+                            <p class="col email-l">Email : </p>
+                            <a href="" class="col"><p>techfest.npgc@gmail.com</p></a>
+                        </li>
+                        <li class="row col">l
+                            <p class="col contact-l">Student Cordinator :</p>
+                            <p class="col">+91 7379113110 , +91 9140331143
+                            </p>
+                        </li>
+                       </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            * {
+                font-family: var(--font-family-R);
+            }
+            .card {width: auto; 
+                min-height: fit-content;
+                
+               
+        border-radius: 30px;
+        border: 2px solid #0C964D;
+        background: rgba(86, 142, 95, 0.20);
+    }
+        </style>
+
+{% endblock %}
+
