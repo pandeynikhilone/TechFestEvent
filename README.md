@@ -18,11 +18,11 @@ A basic registration website built with HTML, CSS, and JavaScript for the fronte
 - ✅ **Admit Card After Payment** – Upon successful payment, students will receive an admit card confirming their participation.  
 
 # Easy Student Registration
-![TechFest Preview](../x-assets/Image1.png)
+![TechFest Preview](./x-assets/Image1.png)
 # Choose Your Event
-![TechFest Preview](../x-assets/Image3.png)
+![TechFest Preview](./x-assets/Image3.png)
 # Manual Payment with Organized Summary
-![TechFest Preview](../x-assets/Image2.png)
+![TechFest Preview](./x-assets/Image2.png)
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
