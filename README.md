@@ -1,6 +1,6 @@
-# Project Name
+# TechFest
 
-Welcome to TechFestEvent! This project was a thrilling challenge that pushed me to master time management. Built on an urgent timeline, our team's dedication and hard work made it possible to create a seamless platform where every student can easily register. Together, we turned urgency into opportunity!
+A basic registration website built with HTML, CSS, and JavaScript for the frontend. It allows students to register their details for participation in a Techfest. This project was developed to offer students an alternative registration experience to traditional forms like Google Forms.
 
 ## Table of Contents
 - [Features](#features)
@@ -16,6 +16,13 @@ Welcome to TechFestEvent! This project was a thrilling challenge that pushed me 
 - ✅ **Choose Your Event** – Students can easily browse and select the event they want to participate in.  
 - ✅ **Manual Payment with Organized Summary** – Added a manual payment method with a well-structured summary and detailed information for better clarity.  
 - ✅ **Admit Card After Payment** – Upon successful payment, students will receive an admit card confirming their participation.  
+
+# Easy Student Registration
+![TechFest Preview](../x-assets/Image1.png)
+# Choose Your Event
+![TechFest Preview](../x-assets/Image3.png)
+# Manual Payment with Organized Summary
+![TechFest Preview](../x-assets/Image2.png)
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
@@ -34,6 +41,7 @@ Make sure you have the following installed:
 ### Clone the Repository
 ```sh
 git clone https://github.com/pandeynikhilone/ProjectThree-TechFestEvent.git
+cd ProjectThree-TechFestEvent
 ```
 
 ### Backend Setup
