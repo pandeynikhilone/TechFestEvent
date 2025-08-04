@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h38yfvp3*fx=$50-l0s85y4bs@ee#5kpsahj12u^viwag%$t+y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['techfestnpgc.pythonanywhere.com','127.0.0.1','https://techfestevent.onrender.com/']
+ALLOWED_HOSTS = ['techfestnpgc.pythonanywhere.com','127.0.0.1','techfestevent.onrender.com/']
 
 RAZORPAY_KEY_ID = "rzp_test_qOsB6NIU4m3YKA"
 RAZORPAY_KEY_SECRET = "p9MQqMJHG3dFCc0vprP006xn"
