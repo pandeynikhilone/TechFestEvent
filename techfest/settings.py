@@ -36,7 +36,6 @@ RAZORPAY_KEY_ID = "rzp_test_qOsB6NIU4m3YKA"
 RAZORPAY_KEY_SECRET = "p9MQqMJHG3dFCc0vprP006xn"
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
