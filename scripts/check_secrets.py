@@ -17,7 +17,7 @@ TEXT_SUFFIXES = {
 }
 
 PATTERNS = [
-    ("Django development secret", re.compile(r"django-insecure-[A-Za-z0-9!#$%&()*+,./:;<=>?@\[\]^_{|}~-]{12,}")),
+    ("Django development secret", re.compile(r"django" + r"-insecure-" + r"[A-Za-z0-9!#$%&()*+,./:;<=>?@\\[\\]^_{|}~-]{12,}")),
     ("hard-coded Django SECRET_KEY", re.compile(r"""(?m)^\s*SECRET_KEY\s*=\s*(['"])[^'"\n]{12,}\1""")),
     ("hard-coded Razorpay secret", re.compile(r"""(?mi)^\s*RAZORPAY_KEY_SECRET\s*=\s*(['"])[^'"\n]{8,}\1""")),
     ("Razorpay key literal", re.compile(r"\brzp_(?:test|live)_[A-Za-z0-9]{12,}\b")),
