@@ -1,0 +1,18 @@
+# Django / Python local files
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Generated static files
+staticfiles/
+
+# Local development and editor files
+.DS_Store
+.vscode/
+.idea/
