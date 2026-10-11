@@ -1,78 +1,68 @@
-# TechFest
+# TechFest Registration Website
 
-A basic registration website built with HTML, CSS, and JavaScript for the frontend. It allows students to register their details for participation in a Techfest. This project was developed to offer students an alternative registration experience to traditional forms like Google Forms.
+A Django-based student registration website for a college techfest. It was built as an alternative to a basic form so students could enter their details, choose an event, review payment information, and access an admit-card flow.
 
-## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Setup and Usage](#setup-and-usage)
-- [Contributors](#contributors)
-- [License](#license)
+## Features
 
-## Features 
+- Student registration
+- Event selection
+- Manual payment summary
+- Admit-card flow after the payment step
+- Responsive frontend with HTML, CSS, JavaScript, and Bootstrap
 
-- ✅ **Easy Student Registration** – A seamless and hassle-free registration process for students.  
-- ✅ **Choose Your Event** – Students can easily browse and select the event they want to participate in.  
-- ✅ **Manual Payment with Organized Summary** – Added a manual payment method with a well-structured summary and detailed information for better clarity.  
-- ✅ **Admit Card After Payment** – Upon successful payment, students will receive an admit card confirming their participation.  
+The project was developed with a team. My contribution was on the frontend and registration experience. The project README and screenshots describe the intended flow; the old deployment and database state should not be assumed to be live.
 
-# Easy Student Registration
-![TechFest Preview](./x-assets/Image1.png)
-# Choose Your Event
-![TechFest Preview](./x-assets/Image3.png)
-# Manual Payment with Organized Summary
-![TechFest Preview](./x-assets/Image2.png)
+## Screenshots
 
-## Technologies Used
+### Student registration
+![TechFest student registration screenshot](./x-assets/Image1.png)
+
+### Payment summary
+![TechFest payment summary screenshot](./x-assets/Image2.png)
+
+### Event selection
+![TechFest event selection screenshot](./x-assets/Image3.png)
+
+## Tech stack
+
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
 - **Backend:** Django
-- **Database:** SQLite 
+- **Database:** SQLite for local development
 
-## Installation
-To set up and run this project locally, follow these steps:
+## Run locally
 
-### Prerequisites
-Make sure you have the following installed:
-- Python (>=3.8)
-- Django (latest stable version)
+Requirements: Python 3.8 or newer and pip.
 
-
-### Clone the Repository
-```sh
-git clone https://github.com/pandeynikhilone/ProjectThree-TechFestEvent.git
-cd ProjectThree-TechFestEvent
+```bash
+git clone https://github.com/pandeynikhilone/TechFestEvent.git
+cd TechFestEvent
+python -m venv .venv
 ```
 
-### Backend Setup
-1. Create and activate a virtual environment:
-```sh
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
-2. Install dependencies:
-```sh
-pip install -r requirements.txt
-```
-3. Apply migrations:
-```sh
+Activate the environment:
+
+- Windows: `.venv\\Scripts\\activate`
+- macOS/Linux: `source .venv/bin/activate`
+
+Install dependencies and run Django migrations:
+
+```bash
+python -m pip install -r requirements.txt
 python manage.py migrate
-```
-4. Create a superuser (optional, for admin access):
-```sh
-python manage.py createsuperuser
-```
-5. Run the server:
-```sh
 python manage.py runserver
 ```
 
-## Contributors
-- **Frontend Developer:** [Nikhil Pandey](https://github.com/pandeynikhilone)
-- **Backend Developer:** [Dev Athwani](https://github.com/devathwani1)
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+A local database is created by Django when you run migrations. Do not commit a database containing real student registrations or personal data. The repository ignores local SQLite databases and environment files.
 
-## Contact
-For any queries or contributions, feel free to reach out via GitHub issues.
+## Team
+
+- **Frontend:** [Nikhil Pandey](https://github.com/pandeynikhilone)
+- **Backend:** [Dev Athwani](https://github.com/devathwani1)
+
+## Project status
+
+This is a college project and is not presented as a currently operated public registration service. Payment and admit-card steps should be tested locally before relying on them.
+
+[Source code](https://github.com/pandeynikhilone/TechFestEvent)
