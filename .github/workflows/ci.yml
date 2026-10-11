@@ -6,6 +6,9 @@ on:
     paths:
       - "**.py"
       - "requirements.txt"
+      - "README.md"
+      - ".gitignore"
+      - "scripts/**"
       - ".env.example"
       - ".github/workflows/ci.yml"
   pull_request:
